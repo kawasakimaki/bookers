@@ -1,14 +1,22 @@
 <h1>Books</h1>
 
-<th>Title</th>
-<th>Body</th>
-
-<% @books.each do |book| %>
-  <%= book.title %>
-  <%= book.body %>
-
-  <%= link_to 'Show', book_path(book.id) %>
-  <%= link_to 'Edit', "/books/:id/edit" %>
-  <%= link_to 'Destroy', "/books/:id" %>
-
-<% end %>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="link"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% @books.each do |book| %>
+        <td><%= book.title %></td>
+        <td><%= book.body %></td>
+        <td><%= link_to 'Show', book_path(book.id) %></td>
+        <td><%= link_to 'Edit', edit_book_path(book.id) %></td>
+        <td><%= link_to 'Destroy', '/books/:id', method: :delete, "data-confirm" => "Are you sure?" %></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
