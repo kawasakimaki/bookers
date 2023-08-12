@@ -19,3 +19,41 @@
   box-sizing: border-box;
 }
 
+.container {
+  font-family: verdana, arial, helvetica, sans-serif;
+  margin: 30px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 26px;
+  margin: 10px 0;
+}
+
+p {
+  font-size: 13px;
+  line-height: 20px;
+  margin :40px;
+}
+
+th {
+  padding-bottom: 5px;
+}
+
+td {
+  padding: 0 5px 8px 5px
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.book-box {
+  margin-bottom: 10px
+}
+
+.linl-box {
+  font-size: 13px;
+}
